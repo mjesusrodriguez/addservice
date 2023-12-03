@@ -1,0 +1,564 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post">
+        <div class="form-group">
+            <label for="name">Your name:</label>
+            <input type="text" name="name"
+                   placeholder="Your name" class="form-control" value="Maria Jesus" required></input>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Contact email:</label>
+            <input type="text" name="email"
+                   placeholder="Your email" class="form-control" value="mjesus.rsanchez@hotmail.com" required></input>
+        </div>
+
+        <div class="form-group">
+            <label for="server">Server url:</label>
+            <input type="text" name="server"
+                   placeholder="Your server url" class="form-control" value="https://mi-server.com" required></input>
+        </div>
+
+        <div class="form-group">
+            <label for="tags">Tags for your service (use the hashtag and the commas):</label>
+            <input type="text" name="tags"
+                   placeholder="#petfriendly #smokingarea #terrace #italian #vegan #rawfood" class="form-control" value="#vegan" required></input>
+        </div>
+
+        <div class="intent1 intent" >
+            <h2>Intent/Purpose 1</h2>
+            <div class="form-group">
+            <label for="intent1">Relative path, this should match with the user's intent:</label>
+            <input type="text" name="intent1"
+                   placeholder="bookrestaurant" class="form-control" value="bookrestaurant" required></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param1_name">Parameter 1 (name):</label>
+                <input type="text" name="param1_name"
+                       placeholder="date" class="form-control" value="date" required></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param1_desc">Parameter 1 Short Description:</label>
+                <input type="text" name="param1_desc"
+                       placeholder="date for the booking" class="form-control" value="date of the booking" required></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param1_req">Parameter 1 Required:</label>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="param1_req" value="Yes" class="form-check-input" id="inlineRadio1" required>
+                    <label class="form-check-label" for="inlineRadio1">Yes</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="param1_req" value="No" class="form-check-input" id="inlineRadio2" required>
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+            </div>
+
+            <label for="param1_type">Parameter 1 Type:</label>
+            <br>
+            <input type="radio" name="param1_type" value="string" required>String <br>
+            <input type="radio" name="param1_type" value="number" required>Number <br>
+            <input type="radio" name="param1_type" value="integer" required>Integer <br>
+            <input type="radio" name="param1_type" value="boolean" required>Boolean <br>
+            <input type="radio" name="param1_type" value="array" required>Array
+            <br>
+
+            <div class="form-group">
+                <label for="param1_q">Parameter 1 - Question to ask to the user:</label>
+                <input type="text" name="param1_q"
+                       placeholder="What day do you want the reservation for?" class="form-control" value="What is the date for the booking?" required></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param2_name">Parameter 2 (name):</label>
+                <input type="text" name="param2_name"
+                       placeholder="date" class="form-control" value="time"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param2_desc">Parameter 2 Short Description:</label>
+                <input type="text" name="param2_desc"
+                       placeholder="date for the booking" class="form-control" value="The time for the booking"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param2_req">Parameter 2 Required:</label>
+                <input type="radio" name="param2_req" value="Yes">Yes <br>
+                <input type="radio" name="param2_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param2_type">Parameter 2 Type:</label>
+                <input type="radio" name="param2_type" value="string">String <br>
+                <input type="radio" name="param2_type" value="number">Number <br>
+                <input type="radio" name="param2_type" value="integer">Integer <br>
+                <input type="radio" name="param2_type" value="boolean">Boolean <br>
+                <input type="radio" name="param2_type" value="array">Array
+                <br>
+            </div>
+
+            <div class="form-group">
+                <label for="param2_q">Parameter 2 - Question to ask to the user:</label>
+                <input type="text" name="param2_q"
+                       placeholder="What day do you want the reservation for?" class="form-control" value="What is the time for the booking"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param3_name">Parameter 3 (name):</label>
+                <input type="text" name="param3_name"
+                       placeholder="date" class="form-control" value="customer"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param3_desc">Parameter 3 Short Description:</label>
+                <input type="text" name="param3_desc"
+                       placeholder="date for the booking" class="form-control" value="customer name"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param3_req">Parameter 3 Required:</label>
+                <input type="radio" name="param3_req" value="Yes">Yes <br>
+                <input type="radio" name="param3_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param3_type">Parameter 3 Type:</label>
+                <input type="radio" name="param3_type" value="string">String <br>
+                <input type="radio" name="param3_type" value="number">Number <br>
+                <input type="radio" name="param3_type" value="integer">Integer <br>
+                <input type="radio" name="param3_type" value="integer">Boolean <br>
+                <input type="radio" name="param3_type" value="integer">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param3_q">Parameter 3 - Question to ask to the user:</label>
+                <input type="text" name="param3_q"
+                       placeholder="What day do you want the reservation for?" class="form-control" value="What is the costumer name for the booking?"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param4_name">Parameter 4 (name):</label>
+                <input type="text" name="param4_name"
+                       placeholder="date" class="form-control" value="email"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param4_desc">Parameter 4 Short Description:</label>
+                <input type="text" name="param4_desc"
+                       placeholder="date for the booking" class="form-control" value="email of the costumer booking"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param3_req">Parameter 4 Required:</label>
+                <input type="radio" name="param4_req" value="Yes">Yes <br>
+                <input type="radio" name="param4_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param4_type">Parameter 4 Type:</label>
+                <input type="radio" name="param4_type" value="string">String <br>
+                <input type="radio" name="param4_type" value="number">Number <br>
+                <input type="radio" name="param4_type" value="integer">Integer <br>
+                <input type="radio" name="param4_type" value="boolean">Boolean <br>
+                <input type="radio" name="param4_type" value="array">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param4_q">Parameter 4 - Question to ask to the user:</label>
+                <input type="text" name="param4_q"
+                       placeholder="What day do you want the reservation for?" class="form-control" value="What is the email of the costumer?"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param5_name">Parameter 5 (name):</label>
+                <input type="text" name="param5_name"
+                       placeholder="date" class="form-control" value="telefono"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param5_desc">Parameter 5 Short Description:</label>
+                <input type="text" name="param5_desc"
+                       placeholder="date for the booking" class="form-control" value="phone of the costumer"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param5_req">Parameter 5 Required:</label>
+                <input type="radio" name="param5_req" value="Yes">Yes <br>
+                <input type="radio" name="param5_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param4_type">Parameter 5 Type:</label>
+                <input type="radio" name="param5_type" value="string">String <br>
+                <input type="radio" name="param5_type" value="number">Number <br>
+                <input type="radio" name="param5_type" value="integer">Integer <br>
+                <input type="radio" name="param5_type" value="boolean">Boolean <br>
+                <input type="radio" name="param5_type" value="array">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param5_q">Parameter 5 - Question to ask to the user:</label>
+                <input type="text" name="param5_q"
+                       placeholder="What day do you want the reservation for?" class="form-control" value="What is the phone of the costumer?"></input>
+            </div>
+        </div>
+
+
+        <div class="intent2 intent">
+            <h2>Intent/Purpose 2</h2>
+            <div class="form-group">
+                <label for="intent2">Relative path, this should match with the user's intent:</label>
+                <input type="text" name="intent2"
+                       placeholder="bookrestaurant" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param1_i2_name">Parameter 1 (name):</label>
+                <input type="text" name="param1_i2_name"
+                       placeholder="date" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param1_i2_desc">Parameter 1 Short Description:</label>
+                <input type="text" name="param1_i2_desc"
+                       placeholder="date for the booking" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param1_i2_req">Parameter 1 Required:</label>
+                <input type="radio" name="param1_i2_req" value="Yes">Yes <br>
+                <input type="radio" name="param1_i2_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param1_i2_type">Parameter 1 Type:</label>
+                <input type="radio" name="param1_i2_type" value="string">String <br>
+                <input type="radio" name="param1_i2_type" value="number">Number <br>
+                <input type="radio" name="param1_i2_type" value="integer">Integer <br>
+                <input type="radio" name="param1_i2_type" value="boolean">Boolean <br>
+                <input type="radio" name="param1_i2_type" value="array">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param1_i2_q">Parameter 1 - Question to ask to the user:</label>
+                <input type="text" name="param1_i2_q"
+                       placeholder="What day do you want the reservation for?" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param2_i2_name">Parameter 2 (name):</label>
+                <input type="text" name="param2_i2_name"
+                       placeholder="date" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param2_i2_desc">Parameter 2 Short Description:</label>
+                <input type="text" name="param2_i2_desc"
+                       placeholder="date for the booking" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param2_i2_req">Parameter 2 Required:</label>
+                <input type="radio" name="param2_i2_req" value="Yes">Yes <br>
+                <input type="radio" name="param2_i2_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param2_i2_type">Parameter 2 Type:</label>
+                <input type="radio" name="param2_i2_type" value="string">String <br>
+                <input type="radio" name="param2_i2_type" value="number">Number <br>
+                <input type="radio" name="param2_i2_type" value="integer">Integer <br>
+                <input type="radio" name="param2_i2_type" value="boolean">Boolean <br>
+                <input type="radio" name="param2_i2_type" value="array">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param2_i2_q">Parameter 2 - Question to ask to the user:</label>
+                <input type="text" name="param2_i2_q"
+                       placeholder="What day do you want the reservation for?" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param3_i2_name">Parameter 3 (name):</label>
+                <input type="text" name="param3_i2_name"
+                       placeholder="date" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param3_i2_desc">Parameter 3 Short Description:</label>
+                <input type="text" name="param3_i2_desc"
+                       placeholder="date for the booking" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param3_i2_req">Parameter 3 Required:</label>
+                <input type="radio" name="param3_i2_req" value="Yes">Yes <br>
+                <input type="radio" name="param3_i2_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param3_type">Parameter 3 Type:</label>
+                <input type="radio" name="param3_i2_type" value="string">String <br>
+                <input type="radio" name="param3_i2_type" value="number">Number <br>
+                <input type="radio" name="param3_i2_type" value="integer">Integer <br>
+                <input type="radio" name="param3_i2_type" value="boolean">Boolean <br>
+                <input type="radio" name="param3_i2_type" value="array">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param3_i2_q">Parameter 3 - Question to ask to the user:</label>
+                <input type="text" name="param3_i2_q"
+                       placeholder="What day do you want the reservation for?" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param4_i2_name">Parameter 4 (name):</label>
+                <input type="text" name="param4_i2_name"
+                       placeholder="date" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param4_i2_desc">Parameter 4 Short Description:</label>
+                <input type="text" name="param4_i2_desc"
+                       placeholder="date for the booking" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param3_i2_req">Parameter 4 Required:</label>
+                <input type="radio" name="param4_i2_req" value="Yes">Yes <br>
+                <input type="radio" name="param4_i2_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param4_i2_type">Parameter 4 Type:</label>
+                <input type="radio" name="param4_i2_type" value="string">String <br>
+                <input type="radio" name="param4_i2_type" value="number">Number <br>
+                <input type="radio" name="param4_i2_type" value="integer">Integer <br>
+                <input type="radio" name="param4_i2_type" value="boolean">Boolean <br>
+                <input type="radio" name="param4_i2_type" value="array">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param4_i2_q">Parameter 4 - Question to ask to the user:</label>
+                <input type="text" name="param4_i2_q"
+                       placeholder="What day do you want the reservation for?" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param5_i2_name">Parameter 5 (name):</label>
+                <input type="text" name="param5_i2_name"
+                       placeholder="date" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param5_i2_desc">Parameter 5 Short Description:</label>
+                <input type="text" name="param5_i2_desc"
+                       placeholder="date for the booking" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param5_i2_req">Parameter 5 Required:</label>
+                <input type="radio" name="param5_i2_req" value="Yes">Yes <br>
+                <input type="radio" name="param5_i2_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param4_i2_type">Parameter 5 Type:</label>
+                <input type="radio" name="param5_i2_type" value="string">String <br>
+                <input type="radio" name="param5_i2_type" value="number">Number <br>
+                <input type="radio" name="param5_i2_type" value="integer">Integer <br>
+                <input type="radio" name="param5_i2_type" value="boolean">Boolean <br>
+                <input type="radio" name="param5_i2_type" value="array">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param5_i2_q">Parameter 5 - Question to ask to the user:</label>
+                <input type="text" name="param5_i2_q"
+                       placeholder="What day do you want the reservation for?" class="form-control"></input>
+            </div>
+        </div>
+
+        <!--
+        <div class="intent3 intent">
+            <h2>Intent/Purpose 3</h2>
+            <div class="form-group">
+                <label for="intent3">Relative path, this should match with the user's intent:</label>
+                <input type="text" name="intent3"
+                       placeholder="bookrestaurant" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param1_i3_name">Parameter 1 (name):</label>
+                <input type="text" name="param1_i3_name"
+                       placeholder="date" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param1_i3_desc">Parameter 1 Short Description:</label>
+                <input type="text" name="param1_i3_desc"
+                       placeholder="date for the booking" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param1_i3_req">Parameter 1 Required:</label>
+                <input type="radio" name="param1_i3_req" value="Yes">Yes <br>
+                <input type="radio" name="param1_i3_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param1_i3_type">Parameter 1 Type:</label>
+                <input type="radio" name="param1_i3_type" value="string">String <br>
+                <input type="radio" name="param1_i3_type" value="number">Number <br>
+                <input type="radio" name="param1_i3_type" value="integer">Integer <br>
+                <input type="radio" name="param1_i3_type" value="integer">Boolean <br>
+                <input type="radio" name="param1_i3_type" value="integer">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param1_i3_q">Parameter 1 - Question to ask to the user:</label>
+                <input type="text" name="param1_i3_q"
+                       placeholder="What day do you want the reservation for?" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param2_i3_name">Parameter 2 (name):</label>
+                <input type="text" name="param2_i3_name"
+                       placeholder="date" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param2_i3_desc">Parameter 2 Short Description:</label>
+                <input type="text" name="param2_i3_desc"
+                       placeholder="date for the booking" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param2_i3_req">Parameter 2 Required:</label>
+                <input type="radio" name="param2_i3_req" value="Yes">Yes <br>
+                <input type="radio" name="param2_i3_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param2_i3_type">Parameter 2 Type:</label>
+                <input type="radio" name="param2_i3_type" value="string">String <br>
+                <input type="radio" name="param2_i3_type" value="number">Number <br>
+                <input type="radio" name="param2_i3_type" value="integer">Integer <br>
+                <input type="radio" name="param2_i3_type" value="integer">Boolean <br>
+                <input type="radio" name="param2_i3_type" value="integer">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param2_i3_q">Parameter 2 - Question to ask to the user:</label>
+                <input type="text" name="param2_i3_q"
+                       placeholder="What day do you want the reservation for?" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param3_i3_name">Parameter 3 (name):</label>
+                <input type="text" name="param3_i3_name"
+                       placeholder="date" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param3_i3_desc">Parameter 3 Short Description:</label>
+                <input type="text" name="param3_i3_desc"
+                       placeholder="date for the booking" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param3_i3_req">Parameter 3 Required:</label>
+                <input type="radio" name="param3_i3_req" value="Yes">Yes <br>
+                <input type="radio" name="param3_i3_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param3_i3_type">Parameter 3 Type:</label>
+                <input type="radio" name="param3_i3_type" value="string">String <br>
+                <input type="radio" name="param3_i3_type" value="number">Number <br>
+                <input type="radio" name="param3_i3_type" value="integer">Integer <br>
+                <input type="radio" name="param3_i3_type" value="integer">Boolean <br>
+                <input type="radio" name="param3_i3_type" value="integer">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param3_i3_q">Parameter 3 - Question to ask to the user:</label>
+                <input type="text" name="param3_i3_q"
+                       placeholder="What day do you want the reservation for?" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param4_i3_name">Parameter 4 (name):</label>
+                <input type="text" name="param4_i3_name"
+                       placeholder="date" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param4_i3_desc">Parameter 4 Short Description:</label>
+                <input type="text" name="param4_i3_desc"
+                       placeholder="date for the booking" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param3_i3_req">Parameter 4 Required:</label>
+                <input type="radio" name="param4_i3_req" value="Yes">Yes <br>
+                <input type="radio" name="param4_i3_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param4_i3_type">Parameter 4 Type:</label>
+                <input type="radio" name="param4_i3_type" value="string">String <br>
+                <input type="radio" name="param4_i3_type" value="number">Number <br>
+                <input type="radio" name="param4_i3_type" value="integer">Integer <br>
+                <input type="radio" name="param4_i3_type" value="integer">Boolean <br>
+                <input type="radio" name="param4_i3_type" value="integer">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param4_i3_q">Parameter 4 - Question to ask to the user:</label>
+                <input type="text" name="param4_i3_q"
+                       placeholder="What day do you want the reservation for?" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param5_i3_name">Parameter 5 (name):</label>
+                <input type="text" name="param5_i3_name"
+                       placeholder="date" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param5_i3_desc">Parameter 5 Short Description:</label>
+                <input type="text" name="param5_i3_desc"
+                       placeholder="date for the booking" class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="param5_i3_req">Parameter 5 Required:</label>
+                <input type="radio" name="param5_i3_req" value="Yes">Yes <br>
+                <input type="radio" name="param5_i3_req" value="No">No
+            </div>
+
+            <div class="form-group">
+                <label for="param4_i3_type">Parameter 5 Type:</label>
+                <input type="radio" name="param5_i3_type" value="string">String <br>
+                <input type="radio" name="param5_i3_type" value="number">Number <br>
+                <input type="radio" name="param5_i3_type" value="integer">Integer <br>
+                <input type="radio" name="param5_i3_type" value="integer">Boolean <br>
+                <input type="radio" name="param5_i3_type" value="integer">Array
+            </div>
+
+            <div class="form-group">
+                <label for="param5_i3_q">Parameter 5 - Question to ask to the user:</label>
+                <input type="text" name="param5_i3_q"
+                       placeholder="What day do you want the reservation for?" class="form-control"></input>
+            </div>
+        </div>
+        !-->
+
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+{% endblock %}
